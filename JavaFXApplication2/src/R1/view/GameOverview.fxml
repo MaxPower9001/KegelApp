@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.3743718592964824" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="503.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="R1.view.GameOverviewController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Spiele" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            <ScrollPane layoutX="14.0" layoutY="42.0" prefHeight="90.0" prefWidth="576.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+               <content>
+                  <TreeTableView fx:id="gameTable" prefHeight="86.0" prefWidth="556.0">
+                    <columns>
+                      <TreeTableColumn fx:id="editButton" prefWidth="28.0" text="E" />
+                      <TreeTableColumn fx:id="playButton" prefWidth="342.0" text="P" />
+                        <TreeTableColumn fx:id="dateTime" prefWidth="75.0" text="Datum/Uhrzeit" />
+                        <TreeTableColumn fx:id="player" prefWidth="75.0" text="Spieler" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TreeTableView>
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="331.0" prefWidth="598.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Neues Spiel erstellen:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            <ChoiceBox layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="149.0" AnchorPane.leftAnchor="14.0" />
+            <TextField layoutX="299.0" layoutY="31.0" prefHeight="25.0" prefWidth="284.0" promptText="Neues Event erstellen" AnchorPane.rightAnchor="14.0" />
+            <TextField layoutX="14.0" layoutY="91.0" promptText="Ort eingeben" AnchorPane.leftAnchor="14.0" />
+            <Separator layoutX="14.0" layoutY="75.0" prefHeight="0.0" prefWidth="570.0" />
+            <DatePicker layoutX="410.0" layoutY="91.0" promptText="Datum auswählen" showWeekNumbers="true" />
+            <Label layoutX="14.0" layoutY="123.0" text="Spieler/Gruppe hinzufügen:" />
+            <Button layoutX="163.0" layoutY="119.0" mnemonicParsing="false" text="P" />
+            <Button layoutX="186.0" layoutY="119.0" mnemonicParsing="false" text="G" />
+            <ChoiceBox layoutX="434.0" layoutY="119.0" prefWidth="150.0" />
+            <ScrollPane layoutX="14.0" layoutY="151.0" prefHeight="103.0" prefWidth="322.0">
+               <content>
+                  <TreeTableView prefHeight="101.0" prefWidth="311.0">
+                    <columns>
+                      <TreeTableColumn prefWidth="75.0" />
+                      <TreeTableColumn prefWidth="75.0" text="Spieler" />
+                        <TreeTableColumn prefWidth="75.0" text="Team" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TreeTableView>
+               </content>
+            </ScrollPane>
+            <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" text="Button" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
